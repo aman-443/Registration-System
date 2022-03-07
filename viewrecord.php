@@ -1,12 +1,21 @@
 
 <?php 
 $title ="view members";
+
 require_once 'include/header.php' ;
 require_once 'db/conn.php' ;
 
 $result=$crud->viewRecord();
 ?>
+<script>
 
+
+if("<?= $title ?>" =="view members"){
+    $(".nav-item").removeClass("active");
+    $("#viewscreen").addClass("active");
+}
+
+</script>
 
 <br>
 <br>

@@ -59,12 +59,9 @@ class crud{
 
     public function editAttendee($id,$fname,$lname,$dob,$specialty,$email,$contact){
     
+        try {
         $sql="UPDATE `attendees` SET `fname`=:fname,`lname`=:lname,
         `dob`=:dob,`specialty`=:specialty,`email`=:email,`phone`=:phone WHERE `attendee_id`=:id";
-
-        try {
-            
-
 
             $stmt=$this->db->prepare($sql);
                         

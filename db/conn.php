@@ -12,15 +12,15 @@ try {
  $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
-
-echo'<script>
-document.getElementById("demo").innerHTML=`<h1 class="text-danger text-center">no database found</h1>`;
-</script>';
-//    throw new PDOException($e->getMessage());
+    include 'include/errormsg.php';
    
 }
 require_once 'crud.php';
+require_once 'user.php';
 $crud = new crud($pdo); 
+$user = new user($pdo); 
+
+$user->createUser("admin",12345);
 
 
 
