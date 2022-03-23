@@ -6,12 +6,13 @@ require_once 'db/conn.php' ;
 
 $result=$crud->viewSpecialties();
 ?>
-
+<br>
+<br>
 <h2 class="text-center"> Registration for IT confernce</h2>
 
 <div class="row justify-content-center">
 <div class="col-5 ">
-
+<h2><?= $_SERVER['PHP_SELF']?></h2>
 <form method="post" action="success.php">
 
   <div class="form-group">
@@ -52,11 +53,11 @@ $result=$crud->viewSpecialties();
 
 
   <button type="submit" class="btn btn-primary btn-block" name="submit">Submit</button>
-
 </form>
 
 </div>
 </div>
+<br>
 
 <?php  require_once 'include/footer.php'; ?>
 

@@ -4,13 +4,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 
-
-<br>
-<br>
-<br>
-<br>
-<p class="text-center">all right reserved &copy copyright 20-22</p>
-
+<div id="footer" class="p-5">
+<p class="text-center" style="color:white">all right reserved &copy copyright 20-22</p>
 </div>
+</div>
+<!-- 
+<script>
+$(function() {
+  let pageName = location.pathname.split('/').slice(-1)[0];
+  let currentLink = $('.navbar-nav .nav-item a[href="'+ pageName +'"]');
+  if (currentLink) {
+    
+    $("a.active1").removeClass("active1");
+            $().addClass("active1");
+            console.log("applied"+this);
+  }
+           
+
+});
+
+</script> -->
   </body>
 </html>

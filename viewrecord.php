@@ -7,18 +7,20 @@ require_once 'db/conn.php' ;
 
 $result=$crud->viewRecord();
 ?>
-<script>
+<!-- <script>
 
 
 if("<?= $title ?>" =="view members"){
-    $(".nav-item").removeClass("active");
-    $("#viewscreen").addClass("active");
+    $(".nav-item").removeClass("active1");
+    $("#viewscreen").addClass("active1");
 }
 
-</script>
+</script> -->
 
 <br>
 <br>
+<div class="row justify-content-center">
+<div class="col-8" style="min-height: 600px;">
 
     <table class="table">
     <thead class="thead-light">
@@ -41,7 +43,7 @@ if("<?= $title ?>" =="view members"){
         <td>
             <a href="view.php?id=<?php echo $r['attendee_id']  ?>" class="btn btn-primary">view</a>
             <a href="edit.php?id=<?php echo $r['attendee_id']  ?>" class="btn btn-warning">edit</a>
-            <a onclick="return confirm('Are you sure youw want to delete this record!')" 
+            <a onclick="return confirm('Are you sure you want to delete this record!')" 
             href="delete.php?id=<?php echo $r['attendee_id']  ?>" class="btn btn-danger">delete</a>
         </td>
         </tr>
@@ -49,6 +51,6 @@ if("<?= $title ?>" =="view members"){
     </tbody>
     </table>
         
-
-
+    </div>
+    </div>
 <?php  require_once 'include/footer.php'; ?>
