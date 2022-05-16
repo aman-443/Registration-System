@@ -12,7 +12,6 @@ $result=$crud->viewSpecialties();
 
 <div class="row justify-content-center">
 <div class="col-5 ">
-<h2><?= $_SERVER['PHP_SELF']?></h2>
 <form method="post" action="success.php">
 
   <div class="form-group">

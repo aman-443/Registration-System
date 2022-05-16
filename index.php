@@ -4,6 +4,7 @@ require_once 'include/header.php' ;
 
 ?>
 <div id="background">
+    <img src="images/circle.png" alt="circleimg" id="circle-img">
 <br>
 <br>
 <br>

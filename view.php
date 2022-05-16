@@ -14,6 +14,7 @@ else{
     $result=$crud->viewSingleRecord($id);
 
 ?>
+<div style="min-height: 600px;">
 <br><br>
 <h1 class="text-center">Employee personal Details </h1>
 <br>
@@ -41,7 +42,7 @@ else{
 
  <?php } ?>
 
-
+ </div>
 
 
 

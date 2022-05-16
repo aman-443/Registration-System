@@ -8,21 +8,6 @@
 <p class="text-center" style="color:white">all right reserved &copy copyright 20-22</p>
 </div>
 </div>
-<!-- 
-<script>
-$(function() {
-  let pageName = location.pathname.split('/').slice(-1)[0];
-  let currentLink = $('.navbar-nav .nav-item a[href="'+ pageName +'"]');
-  if (currentLink) {
-    
-    $("a.active1").removeClass("active1");
-            $().addClass("active1");
-            console.log("applied"+this);
-  }
-           
 
-});
-
-</script> -->
   </body>
 </html>

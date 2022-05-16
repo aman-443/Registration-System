@@ -69,7 +69,7 @@ else{
   <a href="viewrecord.php" class="btn btn-info">Go back</a>
 
 </form>
-
+<br>
 </div>
 </div>
 <?php  }?>

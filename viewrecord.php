@@ -7,15 +7,7 @@ require_once 'db/conn.php' ;
 
 $result=$crud->viewRecord();
 ?>
-<!-- <script>
 
-
-if("<?= $title ?>" =="view members"){
-    $(".nav-item").removeClass("active1");
-    $("#viewscreen").addClass("active1");
-}
-
-</script> -->
 
 <br>
 <br>

@@ -18,9 +18,9 @@ try {
 require_once 'crud.php';
 require_once 'user.php';
 $crud = new crud($pdo); 
-$user = new user($pdo); 
+$user1 = new user($pdo); 
 
-$user->createUser("admin",12345);
+$user1->createUser("admin",12345);
 
 
 

@@ -5,7 +5,6 @@ class user{
 
     function __construct($conn){
         $this->db=$conn;
-
     }
 
     public function createUser($username,$password){
