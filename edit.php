@@ -2,6 +2,7 @@
 <?php 
 $title ="Index page";
 require_once 'include/header.php' ;
+require_once 'include/auth_check.php' ;
 require_once 'db/conn.php' ;
 
 $result=$crud->viewSpecialties();
@@ -22,7 +23,7 @@ else{
 <div class="row justify-content-center">
 <div class="col-5 ">
 
-<form method="post" action="postedit.php">
+<form method="post" action="postedit.php" enctype="multipart/form-data" >
 
   <div class="form-group">
 
@@ -64,6 +65,13 @@ else{
     <small id="contactHelp" class="form-text text-muted">We'll never share your phone no. with anyone else.</small>
   </div>
 
+  <div class="custom-file">
+        <label for="avatar" class="custom-file-label">Select profile image</label>
+        <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
+        <small class="form-text text-mute">upload image is optional</small>
+      </div>
+
+      <br>
 
   <button type="submit" class="btn btn-primary" name="submit">Save Changes</button>
   <a href="viewrecord.php" class="btn btn-info">Go back</a>

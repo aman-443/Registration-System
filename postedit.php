@@ -11,10 +11,22 @@ if (isset($_POST['submit'])){
   $contact = $_POST['contact'];
   $dob = $_POST['dob'];
 
+  $orig_file = $_FILES["avatar"]["tmp_name"];
+  $ext= pathinfo($_FILES['avatar']['name'],PATHINFO_EXTENSION);
+  $target_dir ="uploads/";
+  if($_FILES["avatar"]["tmp_name"]==null){
+    $destination=null;
+  }
+  else{
+  $destination =$target_dir .$contact. ".".$ext;
+  }
+  move_uploaded_file($orig_file,$destination);
 
 
 
-$result=$crud->editAttendee($id,$fname,$lname,$dob,$specialty,$email,$contact);
+
+
+$result=$crud->editAttendee($id,$fname,$lname,$dob,$specialty,$email,$contact,$destination);
 
 if($result){
 

@@ -3,6 +3,8 @@
 $title ="view members";
 
 require_once 'include/header.php' ;
+
+require_once 'include/auth_check.php' ;
 require_once 'db/conn.php' ;
 
 $result=$crud->viewRecord();

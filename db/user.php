@@ -7,7 +7,7 @@ class user{
         $this->db=$conn;
     }
 
-    public function createUser($username,$password){
+    public function createUser($username,$email,$password){
 
         try {
             $result= $this->getUserByUserName($username);
@@ -16,11 +16,12 @@ class user{
             }
             else{
             $newpassword=md5($password.$username);
-            $sql = "INSERT INTO users(name,password) VALUES(:name,:password)";
+            $sql = "INSERT INTO users(name,email,password) VALUES(:name,:email,:password)";
             
             $stmt=$this->db->prepare($sql);
             
             $stmt->bindparam(':name',$username);
+            $stmt->bindparam(':email',$email);
             $stmt->bindparam(':password',$newpassword);
 
             $stmt->execute();
@@ -34,6 +35,8 @@ class user{
             }
         
     }
+
+
 
     public function getUser($username,$password){
 
